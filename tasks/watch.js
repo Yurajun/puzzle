@@ -1,20 +1,31 @@
 import gulp from 'gulp';
-import runSequence from 'run-sequence';
-import { get as browserSync } from 'browser-sync';
-import watch from 'gulp-watch';
+// import runSequence from 'run-sequence';
+import {get as browserSync} from 'browser-sync';
+import {styles, stylesLint} from './styles';
+import {templates, templatesLint} from './templates';
+import {scriptsWatch} from './scripts';
+import {icons} from './icons';
 
 const bs = browserSync('server');
+const reload = done => {
+    bs.reload();
+    done();
+};
 
-gulp.task('watch', () => {
-	global.watch = true;
+export const watch = () => {
+    global.watch = true;
 
-	watch(['app/sprites/**/*.png', '!app/sprites/*.png'], () => runSequence('sprites'));
-	watch('app/{styles,blocks}/**/*.styl', () => {
-		runSequence(['styles', 'styles:lint'], () => bs.reload('assets/styles/app.min.css'));
-	});
-	watch(['app/{pages,blocks}/**/*.jade'], () => runSequence('templates', bs.reload));
-	watch('app/resources/**/*', () => runSequence('copy', bs.reload));
-	watch('app/icons/**/*.svg', () => runSequence('icons', bs.reload));
+    gulp.watch(
+        'app/{styles,blocks}/**/*.styl',
+        gulp.series(styles, stylesLint)
+    );
 
-	gulp.start('scripts:watch');
-});
+    gulp.watch('app/icons/**/*.svg', gulp.series(icons, reload));
+
+    gulp.watch(
+        ['app/{pages,blocks}/**/*.jade'],
+        gulp.series(templates, templatesLint)
+    );
+
+    gulp.watch('app/**/*.js', scriptsWatch);
+};

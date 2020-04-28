@@ -14,38 +14,53 @@ import staticHash from 'gulp-static-hash';
 
 const data = {
 	getData: getData('app/data'),
-	jv0: 'javascript:void(0);'
+	jv0: 'javascript:void(0);',
+	// dev-mode variable for using in jade
+	__DEV__: process.env.NODE_ENV !== 'production',
 };
 
-gulp.task('templates', () => (
-	gulp.src('app/**/*.jade')
-		.pipe(plumber({errorHandler: errorHandler(`Error in \'templates\' task`)}))
+export const templates = () =>
+	gulp
+		.src('app/**/*.jade')
+		.pipe(
+			plumber({
+				errorHandler: errorHandler(`Error in \'templates\' task`),
+			}),
+		)
 		.pipe(cached('jade'))
 		.pipe(gulpIf(global.watch, inheritance({basedir: 'app'})))
 		.pipe(filter(file => /app[\\\/]pages/.test(file.path)))
 		.pipe(jade({basedir: 'app', data}))
-		.pipe(gulpIf(process.env.PRETTIFY !== false, prettify({
-			braceStyle: 'expand',
-			indentWithTabs: true,
-			indentInnerHtml: true,
-			preserveNewlines: true,
-			endWithNewline: true,
-			wrapLineLength: 120,
-			maxPreserveNewlines: 50,
-			wrapAttributesIndentSize: 1,
-			unformatted: ['use']
-		})))
-		.pipe(gulpIf(process.env.NODE_ENV === 'production', staticHash({
-			asset: 'dist',
-			exts: ['js', 'css']
-		})))
+		.pipe(
+			gulpIf(
+				process.env.PRETTIFY !== 'false',
+				prettify({
+					braceStyle: 'expand',
+					indentWithTabs: true,
+					indentInnerHtml: true,
+					preserveNewlines: true,
+					endWithNewline: true,
+					wrapLineLength: 120,
+					maxPreserveNewlines: 50,
+					wrapAttributesIndentSize: 1,
+					unformatted: ['use'],
+				}),
+			),
+		)
+		.pipe(
+			gulpIf(
+				process.env.NODE_ENV === 'production',
+				staticHash({
+					asset: 'dist',
+					exts: ['js', 'css'],
+				}),
+			),
+		)
 		.pipe(rename({dirname: '.'}))
-		.pipe(gulp.dest('dist'))
-));
+		.pipe(gulp.dest('dist'));
 
-gulp.task('templates:lint', () =>
+export const templatesLint = () =>
 	gulp
 		.src('app/**/*.jade')
 		.pipe(pugLinter())
-		.pipe(pugLinter.reporter('fail'))
-);
+		.pipe(pugLinter.reporter('fail'));

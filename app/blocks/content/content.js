@@ -1,38 +1,36 @@
-/* global $ */
 import game from '../game/game.js';
 import Cookies from 'js-cookie';
 
 // проверяем, и если нет то устанавливаем объект с сохраненной игрой
 
-
-
 /**
  * Самый первый раз системы - создаем базу данных
  */
 const oneSaveGame = parseInt(Cookies.get('oneSaveGame'), 10);
-if (!oneSaveGame){
+if (!oneSaveGame) {
 	game.gameStartSave(); // стартуем первый раз за игру и не показываем иконку с сохран
 	// console.log('gs1');
-}else {
-	game.gameGetSaveResum();  // стартуем всегда и проверяем показывать сохранения или нет
+} else {
+	game.gameGetSaveResum(); // стартуем всегда и проверяем показывать сохранения или нет
 	// console.log('gs2');
 }
 
-
-$('.content__resum').on('click', function (){
+$('.content__resum').on('click', function() {
 	const inste = $('[data-remodal-id="load-game"]').remodal();
-	setTimeout(function (){
+	setTimeout(function() {
 		inste.open();
 	}, 300);
 	$('.content').hide(300);
-	$('.game').delay(300).show(300);
-	const openRequest = indexedDB.open('puzzleGame', 1);  // устанавливаем соедениние
-	openRequest.onsuccess = function (e){
+	$('.game')
+		.delay(300)
+		.show(300);
+	const openRequest = indexedDB.open('puzzleGame', 1); // устанавливаем соедениние
+	openRequest.onsuccess = function(e) {
 		const db = e.target.result;
 		const transaction = db.transaction(['saveGame'], 'readonly');
 		const store = transaction.objectStore('saveGame');
 		const request = store.get(1);
-		request.onsuccess = function (event){
+		request.onsuccess = function(event) {
 			const {
 				filename,
 				level,
@@ -43,37 +41,25 @@ $('.content__resum').on('click', function (){
 			const pictureBoxHelp = $('.image-help__img');
 			pictureBoxHelp.attr('src', imageGame);
 			// game.cleanFiled();
-			if (flagPeoptleGameImg){
+			if (flagPeoptleGameImg) {
 				// console.log(base64);
-				game.load(
-					base64,
-					level,
-					true,
-					true,
-					true,
-				);
-			}else {
-				game.load(
-					filename,
-					level,
-					true,
-					true,
-					false,
-				);
+				game.load(base64, level, true, true, true);
+			} else {
+				game.load(filename, level, true, true, false);
 			}
 		};
 	};
 });
 
-game.startSaveGame = function (){
-	const openRequest = indexedDB.open('puzzleGame', 1);  // устанавливаем соедениние
+game.startSaveGame = function() {
+	const openRequest = indexedDB.open('puzzleGame', 1); // устанавливаем соедениние
 	game.musicMenu.pause();
-	openRequest.onsuccess = function (e){
+	openRequest.onsuccess = function(e) {
 		const db = e.target.result;
 		const transaction = db.transaction(['saveGame'], 'readonly');
 		const store = transaction.objectStore('saveGame');
 		const request = store.get(1);
-		request.onsuccess = function (event){
+		request.onsuccess = function(event) {
 			const {
 				flag,
 				zIndex,
@@ -104,7 +90,7 @@ game.startSaveGame = function (){
 			gameContentGame.html(elemDataFlagTrue);
 			// gameContentGame.children().find('image').attr('xlink:href', game.imageGame);
 			game.resize();
-			setTimeout(function (){
+			setTimeout(function() {
 				const instClose = $('[data-remodal-id="load-game"]').remodal();
 				instClose.close();
 			}, 1250);
@@ -118,27 +104,23 @@ game.startSaveGame = function (){
 };
 
 const labelFile = $('.folder-load__label');
-labelFile.on('change', function (e){
+labelFile.on('change', function(e) {
 	game.getFile(e);
 });
 
-function showPeopleGame(pipleImage){
+function showPeopleGame(pipleImage) {
 	const level = parseInt(Cookies.get('puzzleLevel'), 10);
 	game.musicMenu.pause();
-	setTimeout(function (){
+	setTimeout(function() {
 		$('.content').hide(300);
-		$('.game').delay(300).show(300);
+		$('.game')
+			.delay(300)
+			.show(300);
 		const saveGameFlagPiople = true;
 		const imgName = pipleImage;
 		game.cleanFiled();
-		setTimeout(function (){
-			game.load(
-				imgName,
-				level,
-				false,
-				saveGameFlagPiople,
-				true
-			);
+		setTimeout(function() {
+			game.load(imgName, level, false, saveGameFlagPiople, true);
 			game.widthResize = document.documentElement.clientWidth;
 		}, 333);
 		const inst = $('[data-remodal-id="load-game"]').remodal();
@@ -147,20 +129,22 @@ function showPeopleGame(pipleImage){
 	game.imageGame = pipleImage;
 }
 
-
-game.getFile = function (e){
+game.getFile = function(e) {
 	const file = e.target.files[0];
 	const reader = new FileReader();
 
-	reader.onloadend = function (){
+	reader.onloadend = function() {
 		// saveGame.filename = reader.result;
 		const result = reader.result;
 		showPeopleGame(result);
 	};
 
-	if (file.type !== 'null' && file.type === 'image/jpeg' || file.type === 'image/png') {
+	if (
+		(file.type !== 'null' && file.type === 'image/jpeg') ||
+		file.type === 'image/png'
+	) {
 		reader.readAsDataURL(file);
-	}else {
+	} else {
 		const instOpen = $('[data-remodal-id="download-game"]').remodal();
 		instOpen.open();
 	}
@@ -175,22 +159,16 @@ function loadFile () {
 		document.querySelectorAll('img').forEach((img)=>{img.src = savedImgUrl});
 	}
 }*/
-	// document.querySelector('input[type=file]').onchange = saveFile
-	// loadFile();
+// document.querySelector('input[type=file]').onchange = saveFile
+// loadFile();
 
-
-
-
-
-
-
-	// if (file.type !== 'null' && file.type === 'image/jpeg' || file.type === 'image/png'){
-	// 	game.filePiepleGame = window.URL.createObjectURL(file);
-	// 	showPeopleGame(game.filePiepleGame);
-	// }else {
-	// 	const instOpen = $('[data-remodal-id="download-game"]').remodal();
-	// 	instOpen.open();
-	// }
+// if (file.type !== 'null' && file.type === 'image/jpeg' || file.type === 'image/png'){
+// 	game.filePiepleGame = window.URL.createObjectURL(file);
+// 	showPeopleGame(game.filePiepleGame);
+// }else {
+// 	const instOpen = $('[data-remodal-id="download-game"]').remodal();
+// 	instOpen.open();
+// }
 
 /*	readerBynary.onload = function (eve){
 		// let str = '';
@@ -221,4 +199,3 @@ function loadFile () {
 	// readerBynary.readAsDataURL(file);
 	// readerBynary.readAsBinaryString(file);
 	// readerBynary.send(file);*/
-

@@ -1,4 +1,3 @@
-/* global $ */
 import NProgress from 'nprogress';
 import game from '../game/game.js';
 
@@ -9,15 +8,17 @@ NProgress.configure({
 
 NProgress.start();
 
-function loadBar(){
+function loadBar() {
 	$('.preloader').hide(200);
 	setTimeout(() => {
-		$('.content').show(200).addClass('menu-dark-fone');
+		$('.content')
+			.show(200)
+			.addClass('menu-dark-fone');
 		game.soundBar('musicMenu.wav', 'musicMenu.mp3', 'musicMenu.ogg', '0.2');
 	}, 300);
 }
 
-$(window).load(function (){
+$(document).ready(function() {
 	// NProgress.done(loadBar());
 	// результ
 	// $('.game').css({display: 'none'});
@@ -49,5 +50,4 @@ $(window).load(function (){
 	// setTimeout(function (){
 	// 	game.soundBar('musicMenu.wav', 'musicMenu.mp3', 'musicMenu.ogg', '0.2');
 	// }, 2500);
-
 });

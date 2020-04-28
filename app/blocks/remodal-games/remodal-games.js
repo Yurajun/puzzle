@@ -1,6 +1,5 @@
-/* global $ */
-$('.menu-li__a').click(function (){
-	setTimeout(function (){
+$('.menu-li__a').click(function() {
+	setTimeout(function() {
 		$('.scroll-pane-games').jScrollPane();
 		$('.jspVerticalBar').css('background', 'transparent');
 		$('.jspTrack').css('background', 'transparent');
@@ -8,7 +7,7 @@ $('.menu-li__a').click(function (){
 		$('.jspPane').css('padding-bottom', '4vw');
 	}, 500);
 });
-$(function (){
+$(function() {
 	$('.scroll-pane-games').jScrollPane();
 	$('.jspVerticalBar').css('background', 'transparent');
 	$('.jspTrack').css('background', 'transparent');

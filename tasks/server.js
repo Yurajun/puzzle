@@ -1,29 +1,41 @@
-import { create as browserSync } from 'browser-sync';
+import {create as browserSync} from 'browser-sync';
 import gulp from 'gulp';
 import debuga from 'debuga';
+import historyApiFallback from 'connect-history-api-fallback';
+// import proxy from 'http-proxy-middleware';
 
-const bs = browserSync('server');
-const { PORT, OPEN, NODE_ENV, TUNNEL } = process.env;
-
-gulp.task('server', () => (
+export const bs = browserSync('server');
+const {PORT, OPEN, NODE_ENV, TUNNEL, BROWSER_SYNC_PROXY_HOST} = process.env;
+/*
+const middleware = proxy(['/lesson-7'], {
+	target: 'http://localhost:3000',
+	changeOrigin: true,
+	pathRewrite: {
+		'^/lesson-7': ''
+	}
+});
+*/
+export const server = () =>
 	bs.init({
 		files: ['dist/**/*'],
 		open: !!OPEN,
 		reloadOnRestart: true,
+		// proxy: BROWSER_SYNC_PROXY_HOST,
 		port: PORT || 3000,
 		snippetOptions: {
 			rule: {
 				match: /<\/body>/i
 			}
 		},
+		// startPath: '/lesson-7.html',
 		server: {
-			baseDir: [
-				'app/resources',
-				'dist'
-			],
+			baseDir: ['app/resources', 'dist'],
 			directory: false,
-			middleware: NODE_ENV !== 'production' ? [debuga()] : []
+			middleware:
+				NODE_ENV !== 'production'
+					? [historyApiFallback(), debuga()]
+					: []
 		},
-		tunnel: !!TUNNEL
-	})
-));
+		tunnel: !!TUNNEL,
+		notify: false
+	});

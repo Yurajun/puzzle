@@ -1,39 +1,31 @@
 import gulp from 'gulp';
-import errorHandler from 'gulp-plumber-error-handler';
-import statsLogger from 'webpack-stats-logger';
-import makeWebpackConfig from '../webpack.conf.js';
 import webpack from 'webpack';
+import gulpWebpack from 'webpack-stream';
+import makeWebpackConfig from '../webpack.conf.js';
 
-const {NODE_ENV, NOTIFY} = process.env;
+const {NODE_ENV} = process.env;
+// console.log(NODE_ENV);
 const isDebug = NODE_ENV !== 'production';
-const scriptsErrorHandler = errorHandler('Error in \'scripts\' task');
 
 function runWebpack(watch = false) {
-	return function (callback) {
-		const webpackConfig = makeWebpackConfig({
-			watch,
-			debug: isDebug,
-			sourcemaps: isDebug,
-			notify: NOTIFY
-		});
-
-		return webpack(webpackConfig, (error, stats) => {
-			const jsonStats = stats.toJson();
-			if (jsonStats.errors.length) {
-				jsonStats.errors.forEach(message => {
-					scriptsErrorHandler.call({emit() {/* noop */}}, {message});
-				});
-			}
-			statsLogger(error, stats);
-
-			// solve the issue https://github.com/CSSSR/csssr-project-template/issues/169
-			if (watch === false) {
-				callback();
-			}
-		});
-	};
+    return gulpWebpack(
+        makeWebpackConfig({
+            sourcemaps: isDebug,
+            debug: isDebug,
+            eslint: watch
+        }),
+        webpack
+    );
 }
 
-gulp.task('scripts', runWebpack(false));
+export const scripts = () =>
+    gulp
+        .src('app/scripts/app.js')
+        .pipe(runWebpack())
+        .pipe(gulp.dest('dist/assets/scripts'));
 
-gulp.task('scripts:watch', runWebpack(true));
+export const scriptsWatch = () =>
+    gulp
+        .src('app/scripts/app.js')
+        .pipe(runWebpack(true))
+        .pipe(gulp.dest('dist/assets/scripts'));
