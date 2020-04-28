@@ -55,43 +55,43 @@ block content
 			+game
 				+game-content
 				+game-floor
-			+remodal('modal-select', 'true', 'true', 'true')
+			+remodal('modal-select', 'true', 'true', false)
 				+remodal-closed
 				+remodal-h3._choose-puzzle
 					| Выберите паззл
 				+remodal-content.scroll-pane
-			+remodal('modal-about', 'true', 'true', 'true')
+			+remodal('modal-about', 'true', 'true', false)
 				+remodal-closed
 				+remodal-h3._about-game
 					| Об игре
 				+remodal-about.scroll-pane-about
-			+remodal('modal-games', 'true', 'true', 'true')
+			+remodal('modal-games', 'true', 'true', false)
 				+remodal-closed
 				+remodal-h3._other-games
 					| Другие игры
 				+remodal-games.scroll-pane-games
-			+remodal('modal-options', 'true', 'true', 'true')
+			+remodal('modal-options', 'true', 'true', false)
 				+remodal-closed
 				+remodal-h3._options
 					| Настройки
 				+remodal-options
-			+remodal('modal-lenguage', 'true', 'true', 'true')
+			+remodal('modal-lenguage', 'true', 'true', false)
 				+remodal-closed
 				+remodal-h3._change-language
 					| Сменить язык
 				+remodal-lenguage
-			+remodal('load-game', 'false', 'false', 'false')
+			+remodal('load-game', 'false', 'false', false)
 				+game-preloader()
-			+remodal('exit-game', 'true', 'true', 'false')
+			+remodal('exit-game', 'true', 'true', false)
 				+remodal-h3._exit-game
 					| Вернуться в главное меню?
 				+remodal-exit
-			+remodal('download-game', 'false', 'false', 'false')
+			+remodal('download-game', 'false', 'false', false)
 				+remodal-h3._download-game
 					| Данный вид файла не поддерживается.<br />
 					| Выберите другой файл (jpeg либо png)
 				+download-game
-			+remodal('game-complite', 'false', 'false', 'false')
+			+remodal('game-complite', 'false', 'false', false)
 				+remodal-h3._game-complite
 					| Поздравляем!
 				+game-complite
