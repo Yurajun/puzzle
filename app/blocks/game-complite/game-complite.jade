@@ -1,0 +1,7 @@
+mixin game-complite()
+	+b.game-complite&attributes(attributes)
+		block
+
+		+e('p').p Вы закончили паззл
+		+e('img').img&attributes({'alt':' ', 'title': ' '})
+		+e('button').button&attributes({'data-remodal-action': 'confirm'}) Продолжить

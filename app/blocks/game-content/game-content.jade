@@ -1,0 +1,15 @@
+mixin game-content()
+	+b.game-content&attributes(attributes)
+		block
+
+		+e('div').content
+			+b('div').picture-box
+				+e('div').img
+					+e('div').img-grad
+		+b('div').image-help
+			+e('div').close
+				+e('div').close-line._top
+				+e('div').close-line._bottom
+			+e('div').content
+				+e('div').img
+		+e('div').game

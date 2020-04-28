@@ -1,0 +1,38 @@
+.game
+	display none
+
+.group
+	position relative
+	z-index 1
+	top 0
+	left 0
+	display inline-block
+	overflow visible
+	// height 0
+
+.piece
+	position absolute
+	display inline-block
+
+.piece-svg_start
+	stroke #fff
+	// stroke-width .0925925925925926vw
+	stroke-width 2px
+	stroke-opacity 1
+	// filter: drop-shadow(.0925925925925926vw .0925925925925926vw 0 #000)
+	filter: drop-shadow(2px 2px #000)
+
+.piece-svg_move
+	stroke #fff
+	// stroke-width .0925925925925926vw
+	stroke-width 2px
+	stroke-opacity 1
+	// filter: drop-shadow(.0925925925925926vw .0925925925925926vw .4555555555555556vw #000)
+	filter: drop-shadow(2px 2px 12px #000)
+
+.piece-svg_end
+	stroke #999
+	// stroke-width .0525925925925926vw
+	stroke-width 2px
+	stroke-opacity .7
+	// filter: drop-shadow(.0925925925925926vw .0925925925925926vw 0 #000)

@@ -1,0 +1,10 @@
+mixin remodal(modal, flagClic, flagEsc, hashTocken)
+	+b.remodal&attributes({'data-remodal-id': modal, 'data-remodal-options': 'closeOnOutsideClick: ' + flagClic +', closeOnEscape: ' + flagEsc + ',hashTracking: ' + hashTocken, 'class': 'remodal__' + modal})
+		block
+
+		//- +b('p').remodal-p Responsive, lightweight, fast, synchronized with CSS animations, fully customizable modal window plugin with declarative configuration and hash tracking.
+
+		//- +b('button').remodal-cancel&attributes({'data-remodal-action': 'cancel'}) Cancel
+		//- +b('button').remodal-confirm&attributes({'data-remodal-action': 'confirm'}) OK
+
+		//- , data-remodal-options="hashTracking: false, closeOnOutsideClick: false"

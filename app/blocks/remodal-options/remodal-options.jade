@@ -1,0 +1,24 @@
+mixin remodal-options()
+	+b.remodal-options&attributes(attributes)
+		block
+
+		+e('div').level-wrapp
+			+e('p').p Сложность паззла:
+			+e('div').wrap-input
+				+e('label').label-level._margin-left
+					+e('span').span-easy Легкий
+					+e('input').input-level&attributes({'type': 'radio', 'name': 'level', 'value': '1'})
+				+e('label').label-level
+					+e('span').span-middle Средний
+					+e('input').input-level&attributes({'type': 'radio', 'name': 'level', 'value': '2'})
+				+e('label').label-level._margin
+					+e('span').span-difficult Сложный
+					+e('input').input-level&attributes({'type': 'radio', 'name': 'level', 'value': '3'})
+		+b('div').sound-wrapp
+			+b('div').sound-input
+				+e('input').input&attributes({'type': 'checkbox', 'name': 'sound', 'id': 'sound-input'})
+				+e('label').label&attributes({'for': 'sound-input'})
+					+e('span').label-text Звуки в игре <br />
+					+e('span').label-span._on Включены
+					+e('span').label-span._off Выключены
+			+e('div').button._change-language&attributes({'data-remodal-target': 'modal-lenguage'}) Сменить язык

@@ -1,0 +1,17 @@
+mixin game-floor()
+	+b.game-floor&attributes(attributes)
+		block
+
+		+e('div').left
+			+e('div').shift-left
+				+e('button').button-left
+		+e('div').content
+			+e('div').puzzle-line
+		+e('div').right
+			+e('div').shift-right
+				+e('button').button-right
+			+e('div').look-full-img
+				+e('button').button-full-img
+				+e('div').image-help
+			+e('div').end-game&attributes({'href': '#', 'data-remodal-target': 'exit-game'})
+				+e('button').button-game

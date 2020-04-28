@@ -1,0 +1,88 @@
+.preloader
+	margin 2.84375vw auto 0
+	display block
+	max-width 45vw
+	height 100%
+
+	&__title
+		position relative
+		left .78125vw
+		padding-bottom 99.768518518%
+		background-repeat no-repeat
+		background-size contain
+		retinaBackground(lovely-puzzle, png)
+
+@keyframes loader
+	0%
+		width 0
+	100%
+		width 23.4375vw
+
+.preload-box
+	position absolute
+	left 50%
+	bottom 0
+	display block
+	height 6.25vw
+
+	&__load
+		position relative
+		left -50%
+		margin 0 auto
+		overflow hidden
+		width 23.85416666666667vw
+		height 1.510416666666667vw
+		background-size contain
+		retinaBackground(preload-bottom, png)
+	&__load-animate
+		position relative
+		top .0520833333333333vw
+		left .2083333333333333vw
+		height 1.302083333333333vw
+		background-repeat repeat-x
+		background-size contain
+		border-radius 5.604166666666667vw
+		// animation loader 2.6s linear infinite
+
+#nprogress
+	.bar
+		height 1.302083333333333vw
+		background-size contain
+		retinaBackground(preload-in, png)
+
+	.peg
+		box-shadow 0 0 0 transparent, 0 0 0 transparent
+
+	.spinner-icon
+		border-top-color transparent
+		border-left-color transparent
+
+@media only screen and (max-width: 863px)
+	.preloader
+		margin 6.84375vw auto 0
+
+		&__title
+			left 0
+
+	@keyframes loader-mob
+		0%
+			width 0
+		100%
+			width 52.08333333333333vw
+
+	.preload-box
+		height 14.625vw
+
+		&__load
+			width 53.00925925925926vw
+			height 3.356481481481481vw
+		&__load-animate
+			top .1157407407407407vw
+			left .462962962962963vw
+			height 2.893518518518519vw
+			// animation loader-mob 2.6s linear infinite
+	#nprogress
+		.bar
+			height 2.893518518518519vw
+			background-size contain
+			retinaBackground(preload-in, png)

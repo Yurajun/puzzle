@@ -1,0 +1,48 @@
+.game-preloader
+	display block
+
+@keyframes rotation
+	0%
+		transform rotate(0deg)
+	100%
+		transform rotate(360deg)
+
+
+.load-content
+	position absolute
+	z-index 1999999
+	top 0
+	right 0
+	left 0
+	bottom 0
+
+	&__loading-img
+		display flex
+		height 54.7%
+		align-items flex-end
+		justify-content center
+
+	&__img-preload
+		background-repeat no-repeat
+		background-position center center
+		background-size contain
+		animation-name rotation
+		animation-duration 10s
+		animation-timing-function linear
+		animation-iteration-count infinite
+		size(8.854166666666667vw)
+		retinaBackground(load-item, png)
+
+	&__loading-load
+		margin-top 1.354166666666667vw
+		font-family MinionPro-Regular
+		font-size 1.927083333333333vw
+		text-align center
+		color #fffefe
+
+	&__loading-p
+		margin-top .2083333333333333vw
+		font-family MinionPro-Regular
+		font-size 1.302083333333333vw
+		text-align center
+		color #b3b2b0

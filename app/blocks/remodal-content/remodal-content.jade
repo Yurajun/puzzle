@@ -1,0 +1,14 @@
+mixin remodal-content()
+	+b.remodal-content&attributes(attributes)
+		block
+
+		+e('div').content
+
+			- var n = 1;
+			while n < 151
+				if n < 10
+					+e('img').img&attributes({'src': './assets/img-prev/0' + n + '.jpg', 'alt': ''})
+				else
+					+e('img').img&attributes({'src': './assets/img-prev/' + n + '.jpg', 'alt': ''})
+				- n++
+

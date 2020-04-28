@@ -1,0 +1,54 @@
+// Clear the float on any element.
+clearfix()
+	&:after
+		display table
+		clear both
+		content ''
+
+// Fix no working `-webkit-text-size-adjust: 100%;` in Android.
+fix-text-size-adjust()
+	background-image linear-gradient(transparent, transparent)
+
+// Set element size
+size($width, $height = $width)
+	width $width
+	height $height
+
+// Set margin on left & right
+margin-x($margin)
+	margin-left $margin
+	margin-right $margin
+
+// Set margin on top & bottom
+margin-y($margin)
+	margin-top $margin
+	margin-bottom $margin
+
+// Set pading on left & right
+padding-x($padding)
+	padding-left $padding
+	padding-right $padding
+
+// Set padding on top & bottom
+padding-y($padding)
+	padding-top $padding
+	padding-bottom $padding
+
+// Set one static retina image
+retinaBackground($image, $ext = 'png') {
+	background-image url('../images/' + $image + '.' + $ext)
+
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+		background-image url('../images/' + $image + '@2x.' + $ext)
+	}
+}
+
+font-fase(fontFamily, folder, fontName)
+	@font-face
+		font-family fontFamily
+		src url('../fonts/' + folder +'/' + fontName + '.eot') /* IE9 Compat Modes */
+		src url('../fonts/' + folder +'/' + fontName + '?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+				url('../fonts/' + folder +'/' + fontName + '.woff2' ) format('woff2'), /* Super Modern Browsers */
+				url('../fonts/' + folder +'/' + fontName + '.woff') format('woff'), /* Pretty Modern Browsers */
+				url('../fonts/' + folder +'/' + fontName + '.ttf') format('truetype'), /* Safari, Android, iOS */
+				url('../fonts/' + folder +'/' + fontName + '.svg#svgFontName') format('svg') /* Legacy iOS */

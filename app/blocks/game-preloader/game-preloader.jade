@@ -1,0 +1,10 @@
+mixin game-preloader()
+	+b.game-preloader&attributes(attributes)
+		block
+
+		+e('div').loading
+		+b('div').load-content
+			+e('div').loading-img
+				+e('div').img-preload
+			+e('p').loading-load Идет загрузка
+			+e('p').loading-p Пожалуйста подождите

@@ -1,0 +1,18 @@
+mixin remodal-about()
+	+b.remodal-about&attributes(attributes)
+		block
+
+		+e('p').p._desc._margin-top Lovely Puzzle позволит вам выбирать множество паззлов из библиоткеи игры, <br /> а также даст возможность загрузить любую картинку в формате JPG с вашего <br /> компьютера, превратив ее в паззл, который также можно собрать. <br /> При выходе из игры паззл сохраняется, поэтому вы всегда сможете <br /> продолжить собирать его позже.
+		+e('a').logo&attributes({'href': 'http://humaninterface.pro', 'target': 'blank'})
+		+e('p').p._devel._font-size
+			+e('span').p-span В разработке участвовали: <br />
+			| Ульященков Сергей 
+			+e('span').p-span (автор идеи, <br /> дизайн, интерфейс), 
+			| Имя <br /> Фамилия
+			+e('span').p-span (программирование), <br />
+			| Светлана Фокина 
+			+e('span').p-span (соавтор).
+
+		+e('h4').h4 Обратная связь
+		+e('a').a&attributes({'href': 'mailto:support@humaninterface.pro'})
+			| support@humaninterface.pro

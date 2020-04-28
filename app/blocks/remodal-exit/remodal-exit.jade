@@ -1,0 +1,7 @@
+mixin remodal-exit()
+	+b.remodal-exit&attributes(attributes)
+		block
+
+		+b('div').exit-wrapp
+			+e('div').button._return&attributes({'data-remodal-action': 'confirm'}) В главное меню
+			+e('div').button._no&attributes({'data-remodal-action': 'cancel'}) Отмена

@@ -1,0 +1,193 @@
+.remodal-options
+	margin 0 auto
+	display block
+
+	&__level-wrapp
+		margin 9.6875vh auto 0
+		display flex
+		width 58.85416666666667vw
+		justify-content space-between
+
+	&__p
+		margin 2.03125vw 0 0 .78125vw
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+		color #fff
+		
+		&_eng-style
+			position relative
+			top -3vw
+			display inline-block
+			line-height 1.2
+			text-align right
+
+	&__input-level:not(checked)
+		position absolute
+		opacity 0
+
+	&__label-level
+		position relative
+		margin-left 2.604166666666667vw
+		padding-top 2.239583333333333vw
+		display inline-block
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+		text-align center
+		cursor pointer
+		color #8e8e8e
+		border-bottom none
+		// transition all .4s
+
+		&::after
+			position absolute
+			top 0
+			left calc(50% - .9114583333333333vw)
+			width 1.822916666666667vw
+			height 1.25vw
+			content ''
+			background-repeat no-repeat
+			background-size contain
+			opacity 0
+			transition all .4s
+		&::after
+			retinaBackground(check, png)
+
+	&__label-level2
+		position relative
+		margin-left 2.604166666666667vw
+		padding-top 2.239583333333333vw
+		display inline-block
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+		text-align center
+		cursor pointer
+		color #d1a3a4
+		border-bottom .1041666666666667vw solid #d1a3a4
+		// transition all .4s
+
+		&::after
+			position absolute
+			top 0
+			left calc(50% - .9114583333333333vw)
+			width 1.822916666666667vw
+			height 1.25vw
+			content ''
+			background-repeat no-repeat
+			background-size contain
+			opacity 1
+			transition all .4s
+		&::after
+			retinaBackground(check, png)
+
+.remodal-options__label-level_margin-left
+	margin-left 0
+
+.remodal-options__label-level_margin
+	margin-right .3645833333333333vw
+	
+
+.sound-wrapp
+	margin 18.5vh auto 0
+	display flex
+	width 58.85416666666667vw
+	text-align left
+	justify-content space-between
+
+	&__button
+		position relative
+		top .5208333333333333vw
+		right .5208333333333333vw
+		width 23.95833333333333vw
+		height 4.6875vw
+		font-family MinionPro-Regular
+		font-size 2.291666666666667vw
+		line-height 4.375vw
+		text-align center
+		cursor pointer
+		color #d1a3a4
+		border .15625vw solid #d1a3a4
+		border-radius 2.34375vw
+
+.sound-input
+	width 30.04166666666667vw
+	&__input
+		vertical-align top
+
+	&__input:not(checked)
+		position absolute
+		opacity 0
+
+		& + .sound-input__label
+			position relative
+			padding-left 12.03125vw
+			cursor pointer
+		
+			&:before
+				position absolute
+				top .4166666666666667vw
+				left 0
+				width 10.57291666666667vw
+				height 4.6875vw
+				content ''
+				background #8e8e8e
+				border-radius 2.34375vw
+
+			&:after
+				position absolute
+				top .625vw
+				left .4166666666666667vw
+				width 4.166666666666667vw
+				height 4.166666666666667vw
+				content ''
+				background #fff
+				border .0520833333333333vw solid #000
+				border-radius 2.083333333333333vw
+				transition all .2s
+
+		& + .sound-input__label2
+			position relative
+			padding-left 12.03125vw
+			cursor pointer
+		
+			&:before
+				position absolute
+				top .4166666666666667vw
+				left 0
+				width 10.57291666666667vw
+				height 4.6875vw
+				content ''
+				background #d1a3a4
+				border-radius 2.34375vw
+
+			&:after
+				position absolute
+				top .625vw
+				left 5.9375vw
+				width 4.166666666666667vw
+				height 4.166666666666667vw
+				content ''
+				background #fff
+				border .0520833333333333vw solid #000
+				border-radius 2.083333333333333vw
+				transition all .2s
+
+	&__label, &__label2
+		display block
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+
+		&-text
+			font-size 2.34375vw
+			text-align left
+			letter-spacing .1041666666666667vw
+			color #fff
+
+	&__label-span
+		font-family MinionPro-Regular
+		font-size 2.083333333333333vw
+		color #d1a3a4
+
+		&_on
+			color #d1a3a4
+		&_off
+			color #8e8e8e

@@ -1,0 +1,15 @@
+mixin remodal-lenguage()
+	+b.remodal-lenguage&attributes(attributes)
+		block
+
+		+e('div').level-wrapp
+			+e('p').p Выберите язык:
+			+e('div').wrap-input
+				+e('label').label-level._margin-left English
+					+e('input').input-level&attributes({'type': 'radio', 'name': 'level', 'value': '1'})
+				+e('label').label-level
+					+e('span').span-rus Русский
+					+e('input').input-level&attributes({'type': 'radio', 'name': 'level', 'value': '2'})
+		+b('div').save-wrapp
+			+e('div').button._save&attributes({'data-remodal-action': 'confirm'}) Сохранить
+			+e('div').button._no&attributes({'data-remodal-action': 'cancel'}) Отмена

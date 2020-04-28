@@ -1,0 +1,103 @@
+.remodal-lenguage
+	margin 0 auto
+	display block
+
+	&__level-wrapp
+		margin 21.6875vh auto 0
+		display flex
+		width 44.85416666666667vw
+		justify-content space-between
+
+	&__p
+		margin 2.03125vw 0 0 .78125vw
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+		color #fff
+
+	&__input-level:not(checked)
+		position absolute
+		opacity 0
+
+	&__label-level
+		position relative
+		margin-right 2.2vw
+		margin-left 1.604166666666667vw
+		padding-top 2.239583333333333vw
+		display inline-block
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+		text-align center
+		cursor pointer
+		color #8e8e8e
+		border-bottom none
+		// transition all .4s
+
+		&::after
+			position absolute
+			top 0
+			left calc(50% - .9114583333333333vw)
+			width 1.822916666666667vw
+			height 1.25vw
+			content ''
+			background-repeat no-repeat
+			background-size contain
+			opacity 0
+			transition all .4s
+		&::after
+			retinaBackground(check, png)
+
+	&__label-level2
+		position relative
+		margin-right 2.2vw
+		margin-left 1.604166666666667vw
+		padding-top 2.239583333333333vw
+		display inline-block
+		font-family MinionPro-Regular
+		font-size 2.552083333333333vw
+		text-align center
+		cursor pointer
+		color #d1a3a4
+		border-bottom .1041666666666667vw solid #d1a3a4
+		// transition all .4s
+
+		&::after
+			position absolute
+			top 0
+			left calc(50% - .9114583333333333vw)
+			width 1.822916666666667vw
+			height 1.25vw
+			content ''
+			background-repeat no-repeat
+			background-size contain
+			opacity 1
+			transition all .4s
+		&::after
+			retinaBackground(check, png)
+
+.remodal-lenguage__label-level_margin-left
+	margin-left 0
+
+.remodal-lenguage__label-level_margin
+	margin-right .3645833333333333vw
+
+.save-wrapp
+	margin 21.5vh auto 0
+	display flex
+	width 53.666666667vw
+	text-align left
+	justify-content space-between
+
+	&__button
+		position relative
+		top .5208333333333333vw
+		right .5208333333333333vw
+		width 22.95833333333333vw
+		height 4.6875vw
+		font-family MinionPro-Regular
+		font-size 2.291666666666667vw
+		line-height 4.375vw
+		text-align center
+		cursor pointer
+		color #d1a3a4
+		border .15625vw solid #d1a3a4
+		border-radius 2.34375vw

@@ -1,0 +1,14 @@
+mixin remodal-games()
+	+b.remodal-games&attributes(attributes)
+		block
+		
+		+e('p').p Попробуйте другие наши игры <br /> в Windows Store, Google Play и App Store
+
+		+e('div').img-wrapp
+			+e('a').img-box&attributes({'href': 'http://ghostridegame.com', 'target': '_blank'})
+				+e('div').img._ghost-ride
+				+e('h4').h4 Ghost Ride
+			+e('div').img-box._music-quest
+				+e('div').img._music-quest
+				+e('h4').h4._music-quest Music Quest <br />
+					+e('span').h4-span (Coming Soon)

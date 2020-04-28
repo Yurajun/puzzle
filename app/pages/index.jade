@@ -1,0 +1,97 @@
+include /blocks/wrapper/wrapper
+include /blocks/preloader/preloader
+include /blocks/content/content
+include /blocks/game-preloader/game-preloader
+include /blocks/game/game
+include /blocks/game-content/game-content
+include /blocks/game-floor/game-floor
+include /blocks/remodal/remodal
+include /blocks/remodal-closed/remodal-closed
+include /blocks/remodal-h3/remodal-h3
+include /blocks/remodal-content/remodal-content
+include /blocks/remodal-about/remodal-about
+include /blocks/remodal-games/remodal-games
+include /blocks/remodal-options/remodal-options
+include /blocks/remodal-lenguage/remodal-lenguage
+include /blocks/remodal-exit/remodal-exit
+include /blocks/game-complite/game-complite
+include /blocks/download-game/download-game
+extends /blocks/layout-default/layout-default
+
+block head
+	- var pageTitle = 'Lovely Puzzle';
+	- var pageDescription = 'Lovely Puzzle – красота из кусочков. Собирайте красивые паззлы или загрузите свой собственный! В игре более 100 паззлов, возможность собрать паззл из любой картинки на вашем компьютере, настраиваемая сложность игры.';
+	- var pageKeywords = 'паззл, puzzle, бесплатный паззл, браузерная игра паззл, free puzzle, browser puzzle game, для детей, загрузить свой паззл, сделать паззл из картинки, любимые паззлы, красивые паззлы, паззлы с лошадками, паззлы с машинами, паззлы с мотоциклами, паззлы с Римом, паззлы с видами Италии, паззлы с городскими пейзажами, паззлы с детьми, паззлы с игрушками, паззлы с животными, играть бесплатно в браузере, create puzzle from image, lovely puzzles, puzzles with horses, puzzles with cars, puzzles with motorcycles, puzzles with Rome, puzzles with Italy landscapes, urban puzzles, kid’s puzzles, puzzles with toys, puzzles with animals and birds, уровень сложности в паззле, простые для сборки паззлы, сложные паззлы для настоящих фанатов';
+
+block content
+	+b('div').remodal-bg
+		+wrapper
+			+preloader
+			+content
+				+e('div').logo
+				+e('div').folder
+					+b('div').folder-select
+						+e('div').img&attributes({'data-remodal-target': 'modal-select'})
+						+b('h2').folder-title._insert-select Выбрать <br /> паззл
+
+					+b('div').folder-load
+						//- +e('label').label&attributes({'href': '#', 'data-remodal-target': 'download-game'})
+						+e('label').label&attributes({'for': 'file-download'})
+							+e('input').input&attributes({'type': 'file', 'id': 'file-download'})
+
+						+b('h2').folder-title._insert-upload Загрузить <br /> картинку
+				+e('nav').menu
+					+b('ul').menu
+						+b('li').menu-li
+							+e('a').a._about-game&attributes({'href': '#', 'data-remodal-target': 'modal-about'}) Об игре
+						+b('li').menu-li
+							+e('a').a._other-games&attributes({'href': '#', 'data-remodal-target': 'modal-games'}) Другие игры
+						+b('li').menu-li
+							+e('a').a._options&attributes({'href': '#', 'data-remodal-target': 'modal-options'}) Настройки
+				+e('div').resum
+					+b('div').resum-puzzle
+					+b('p').resum-p Продолжить <br />
+						+e('span').span сборку
+			+game
+				+game-content
+				+game-floor
+			+remodal('modal-select', 'true', 'true', 'true')
+				+remodal-closed
+				+remodal-h3._choose-puzzle
+					| Выберите паззл
+				+remodal-content.scroll-pane
+			+remodal('modal-about', 'true', 'true', 'true')
+				+remodal-closed
+				+remodal-h3._about-game
+					| Об игре
+				+remodal-about.scroll-pane-about
+			+remodal('modal-games', 'true', 'true', 'true')
+				+remodal-closed
+				+remodal-h3._other-games
+					| Другие игры
+				+remodal-games.scroll-pane-games
+			+remodal('modal-options', 'true', 'true', 'true')
+				+remodal-closed
+				+remodal-h3._options
+					| Настройки
+				+remodal-options
+			+remodal('modal-lenguage', 'true', 'true', 'true')
+				+remodal-closed
+				+remodal-h3._change-language
+					| Сменить язык
+				+remodal-lenguage
+			+remodal('load-game', 'false', 'false', 'false')
+				+game-preloader()
+			+remodal('exit-game', 'true', 'true', 'false')
+				+remodal-h3._exit-game
+					| Вернуться в главное меню?
+				+remodal-exit
+			+remodal('download-game', 'false', 'false', 'false')
+				+remodal-h3._download-game
+					| Данный вид файла не поддерживается.<br />
+					| Выберите другой файл (jpeg либо png)
+				+download-game
+			+remodal('game-complite', 'false', 'false', 'false')
+				+remodal-h3._game-complite
+					| Поздравляем!
+				+game-complite

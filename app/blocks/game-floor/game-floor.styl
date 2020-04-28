@@ -1,0 +1,192 @@
+.game-floor
+	retinaBackground(floor-game, jpg)
+
+.game-floor
+	position absolute
+	bottom 0
+	padding .8854166666666667% 0
+	display flex
+	flex-direction row
+	width 100%
+	height 8.802083333333333vw
+	background-repeat no-repeat
+	background-size contain
+	justify-content space-between
+
+	&__left
+		position relative
+		z-index 2
+		top -.8vw
+		margin-top .2541666666666667vw
+		padding-left .4166666666666667%
+		width 5vw
+		height 8.535353535353535vw
+		background-repeat no-repeat
+		background-size cover
+		justify-content space-between
+	
+	&__left
+		retinaBackground(left, png)
+
+	&__content
+		position absolute
+		z-index 0
+		left 0
+		margin-top .2541666666666667vw
+		margin-right 1.5vw
+		width 100%
+		// overflow hidden
+
+	&__puzzle-line
+		position absolute
+		left 0
+		display flex
+		width 22000px
+		transition .2s
+		align-items flex-start
+
+	&__right
+		position relative
+		z-index 2
+		top -.8vw
+		margin-top .2541666666666667vw
+		padding-right 1.302083333333333%
+		padding-left 1.5%
+		display flex
+		flex-direction row
+		width 21.4vw
+		height 8.535353535353535vw
+		background-repeat no-repeat
+		background-size cover
+		justify-content space-between
+
+	&__right
+		retinaBackground(right, png)
+
+	&__shift-left
+		margin-top -.1vw
+		display flex
+		width 3.541666666666667vw
+		height 100%
+
+	&__button-left
+		margin auto
+		// padding-bottom 179.4117647058824%
+		width 100%
+		height 6.161616161616162vw
+		font-size 0
+		cursor pointer
+		background transparent
+		background-repeat no-repeat
+		background-size contain
+		border none
+		retinaBackground(shift-left, png)
+
+	&__shift-right
+		margin-top -.1vw
+		display flex
+		width 3.541666666666667vw
+		height 100%
+		// align-items center
+
+	&__button-right
+		margin auto
+		width 100%
+		height 6.161616161616162vw
+		font-size 0
+		cursor pointer
+		background transparent
+		background-repeat no-repeat
+		background-size contain
+		border none
+		// padding-bottom 179.4117647058824%
+
+	&__button-right
+		retinaBackground(shift-right, png)
+
+	&__look-full-img
+		margin-top -.1vw
+		display flex
+		width 6.354166666666667vw
+		height 100%
+
+		&_help
+			width 8.1vw
+
+	&__button-full-img
+		z-index 2
+		margin auto
+		// padding-bottom 100%
+		width 100%
+		height 6.161616161616162vw
+		font-size 0
+		cursor pointer
+		background transparent
+		background-repeat no-repeat
+
+		background-size contain
+		border none
+
+	&__button-full-img
+		retinaBackground(look-full-img, png)
+
+		&_help
+			position absolute
+			left 3.2vw
+			padding-bottom 120%
+			background-position .5vw -1.5vw
+			background-size 53%
+			retinaBackground(image-help, png)
+
+	&__end-game
+		margin-top -.1vw
+		display flex
+		width 6.354166666666667vw
+		height 100%
+
+	&__button-game
+		margin auto
+		// padding-bottom 100%
+		width 100%
+		height 6.161616161616162vw
+		font-size 0
+		cursor pointer
+		background transparent
+		background-repeat no-repeat
+		background-size contain
+		border none
+
+	&__button-game
+		retinaBackground(end-game, png)
+
+.image-help
+	position absolute
+	z-index 1
+	top 0
+	right 0
+	left 0
+	bottom 0
+	display none
+	background rgba(0, 0, 0, .4)
+
+	&__close
+		position absolute
+		top .55vw
+		right .55vw
+		width 4vw
+		height 4vw
+		cursor pointer
+
+		&-line
+			position absolute
+			top 50%
+			width 3.5vw
+			height .27vw
+			background #ffffff
+			border-radius 10px
+			
+			&_top
+				transform rotate(135deg)
+
+			&_bottom
+				transform rotate(45deg)

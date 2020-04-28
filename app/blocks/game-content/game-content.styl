@@ -1,0 +1,69 @@
+.game-content
+	position absolute
+	top 0
+	right 0
+	left 0
+	bottom 0
+	padding-bottom 8.854166666666667%
+	display flex
+	overflow hidden
+	min-height 100vh
+
+	&__content
+		margin auto
+		height 100%
+
+	&__game
+		position absolute
+		top 0
+		left 0
+		width 100%
+		height 100%
+
+linear-gradient(start_color, center_color, end_color, start = left top, end = left bottom)
+	mozstart = top if start = left top
+	background start_color
+	background -moz-linear-gradient(mozstart, start_color 0, center_color 50% end_color 100%)
+	background -webkit-gradient(linear, start, end, color-stop(0%, start_color), color-stop(50%, center_color), color-stop(100%, end_color))
+	-webkit-background-origin padding-box
+
+linear-gradient-right(start_color, center_color, end_color, start = left top, end = right top)
+	mozstart = top if start = left top
+	background start_color
+	background -moz-linear-gradient(mozstart, start_color 0, center_color 50% end_color 100%)
+	background -webkit-gradient(linear, start, end, color-stop(0%, start_color), color-stop(50%, center_color), color-stop(100%, end_color))
+	-webkit-background-origin padding-box
+
+.picture-box
+	display flex
+	height 100%
+
+	&__img
+		margin auto
+		box-sizing content-box
+		height 100%
+		border .3125vw solid #eee
+		border-radius .2604166666666667vw
+		box-shadow 0 0 3.125vw rgba(0, 0, 0, 1)
+		linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .1), rgba(0, 0, 0, .7))
+
+	&__img-grad
+		display block
+		height 100%
+		linear-gradient-right(rgba(0, 0, 0, .7), rgba(0, 0, 0, .1), rgba(0, 0, 0, .7))
+
+.image-help
+	min-height 100vh
+
+	&__content
+		padding-bottom 8.854166666666667%
+		display flex
+		flex-direction row
+		height 100%
+
+	&__img
+		margin auto
+		display block
+		box-sizing content-box
+		border .3125vw solid #eee
+		border-radius 5px
