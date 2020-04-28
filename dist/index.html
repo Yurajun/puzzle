@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta property="og:title" content="Lovely Puzzle – красота из кусочков">
+		<meta property="og:type" content="article">
+		<meta property="og:description"
+		 content="Собирай красивые паззлы или загрузи свой собственный! В игре вы найдете более 100 паззлов и сможете настроить сложность игры на свой вкус.">
+		<meta property="og:image" content="http://lovelypuzzle.ru/lovely-puzzle-social.jpg?id=971395">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:url" content="http://lovelypuzzle.ru">
+		<meta property="og:site_name" content="Lovely Puzzle">
+		<meta property="fb:app_id" content="966242223397117">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site:id" content="876656">
+		<meta name="twitter:creator" content="Human Interface">
+		<meta name="twitter:url" content="http://lovelypuzzle.ru">
+		<meta name="twitter:title" content="Lovely Puzzle – красота из кусочков">
+		<meta name="twitter:description"
+		 content="Собирайте красивые паззлы! В игре вы найдете более 100 паззлов, сможете создать паззл из любой картинки на вашем компьютере, а также настроить сложность игры.">
+		<meta name="twitter:image" content="http://lovelypuzzle.ru/lovely-puzzle-social.jpg?id=678191">
+		<meta name="imagetoolbar" content="no">
+		<meta name="msthemecompatible" content="no">
+		<meta name="cleartype" content="on">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="format-detection" content="address=no">
+		<meta name="google" value="notranslate">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<link sizes="57x57" href="/apple-touch-icon-57x57.png" rel="apple-touch-icon">
+		<link sizes="114x114" href="/apple-touch-icon-114x114.png" rel="apple-touch-icon">
+		<link sizes="72x72" href="/apple-touch-icon-72x72.png" rel="apple-touch-icon">
+		<link sizes="144x144" href="/apple-touch-icon-144x144.png" rel="apple-touch-icon">
+		<link sizes="60x60" href="/apple-touch-icon-60x60.png" rel="apple-touch-icon">
+		<link sizes="120x120" href="/apple-touch-icon-120x120.png" rel="apple-touch-icon">
+		<link sizes="76x76" href="/apple-touch-icon-76x76.png" rel="apple-touch-icon">
+		<link sizes="152x152" href="/apple-touch-icon-152x152.png" rel="apple-touch-icon">
+		<link sizes="180x180" href="/apple-touch-icon-180x180.png" rel="apple-touch-icon">
+		<link sizes="96x96" href="/favicon-96x96.png" rel="icon" type="image/png">
+		<link sizes="16x16" href="/favicon-16x16.png" rel="icon" type="image/png">
+		<link sizes="32x32" href="/favicon-32x32.png" rel="icon" type="image/png">
+		<link sizes="192x192" href="/android-chrome-192x192.png" rel="icon" type="image/png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="application-name" content="">
+		<meta name="msapplication-tooltip" content="">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		<meta name="msapplication-starturl" content="http://lovelypuzzle.ru">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="msapplication-square70x70logo" content="/mstile-small.png">
+		<meta name="msapplication-square150x150logo" content="/mstile-medium.png">
+		<meta name="msapplication-wide310x150logo" content="/mstile-wide.png">
+		<meta name="msapplication-square310x310logo" content="/mstile-large.png">
+		<title>Lovely Puzzle</title>
+		<meta name="description"
+		 content="Lovely Puzzle – красота из кусочков. Собирайте красивые паззлы или загрузите свой собственный! В игре более 100 паззлов, возможность собрать паззл из любой картинки на вашем компьютере, настраиваемая сложность игры.">
+		<meta name="keywords"
+		 content="паззл, puzzle, бесплатный паззл, браузерная игра паззл, free puzzle, browser puzzle game, для детей, загрузить свой паззл, сделать паззл из картинки, любимые паззлы, красивые паззлы, паззлы с лошадками, паззлы с машинами, паззлы с мотоциклами, паззлы с Римом, паззлы с видами Италии, паззлы с городскими пейзажами, паззлы с детьми, паззлы с игрушками, паззлы с животными, играть бесплатно в браузере, create puzzle from image, lovely puzzles, puzzles with horses, puzzles with cars, puzzles with motorcycles, puzzles with Rome, puzzles with Italy landscapes, urban puzzles, kid’s puzzles, puzzles with toys, puzzles with animals and birds, уровень сложности в паззле, простые для сборки паззлы, сложные паззлы для настоящих фанатов">
+		<link href="assets/styles/app.min.css" rel="stylesheet">
+	</head>
+
+	<body class="page">
+		<div class="remodal-bg">
+			<div class="wrapper">
+				<div class="preloader">
+					<div class="preloader__title"></div>
+					<div class="preload-box">
+						<div class="preload-box__load">
+							<div class="preload-box__load-animate"></div>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="content__logo"></div>
+					<div class="content__folder">
+						<div class="folder-select">
+							<div class="folder-select__img" data-remodal-target="modal-select"></div>
+							<h2 class="folder-title folder-title_insert-select">Выбрать <br /> паззл</h2>
+						</div>
+						<div class="folder-load"><label class="folder-load__label" for="file-download"><input
+								 class="folder-load__input" type="file" id="file-download" /></label>
+							<h2 class="folder-title folder-title_insert-upload">Загрузить <br /> картинку</h2>
+						</div>
+					</div>
+					<nav class="content__menu">
+						<ul class="menu">
+							<li class="menu-li"><a class="menu-li__a menu-li__a_about-game" href="#"
+								 data-remodal-target="modal-about">Об игре</a></li>
+							<li class="menu-li"><a class="menu-li__a menu-li__a_other-games" href="#"
+								 data-remodal-target="modal-games">Другие игры</a></li>
+							<li class="menu-li"><a class="menu-li__a menu-li__a_options" href="#"
+								 data-remodal-target="modal-options">Настройки</a></li>
+						</ul>
+					</nav>
+					<div class="content__resum">
+						<div class="resum-puzzle"></div>
+						<p class="resum-p">Продолжить <br /><span class="resum-p__span">сборку</span></p>
+					</div>
+				</div>
+				<div class="game">
+					<div class="game-content">
+						<div class="game-content__content">
+							<div class="picture-box">
+								<div class="picture-box__img">
+									<div class="picture-box__img-grad"></div>
+								</div>
+							</div>
+						</div>
+						<div class="image-help">
+							<div class="image-help__close">
+								<div class="image-help__close-line image-help__close-line_top"></div>
+								<div class="image-help__close-line image-help__close-line_bottom"></div>
+							</div>
+							<div class="image-help__content">
+								<div class="image-help__img"></div>
+							</div>
+						</div>
+						<div class="game-content__game"></div>
+					</div>
+					<div class="game-floor">
+						<div class="game-floor__left">
+							<div class="game-floor__shift-left"><button class="game-floor__button-left"></button></div>
+						</div>
+						<div class="game-floor__content">
+							<div class="game-floor__puzzle-line"></div>
+						</div>
+						<div class="game-floor__right">
+							<div class="game-floor__shift-right"><button class="game-floor__button-right"></button>
+							</div>
+							<div class="game-floor__look-full-img"><button class="game-floor__button-full-img"></button>
+								<div class="game-floor__image-help"></div>
+							</div><a class="game-floor__end-game" href="#" data-remodal-target="exit-game"><button
+								 class="game-floor__button-game"></button></a>
+						</div>
+					</div>
+				</div>
+				<div class="remodal remodal__modal-select" data-remodal-id="modal-select"
+				 data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true,hashTracking: false">
+					<div class="remodal-closed" data-remodal-action="close">
+						<div class="remodal-closed__top"></div>
+						<div class="remodal-closed__center"></div>
+					</div>
+					<h3 class="remodal-h3 remodal-h3_choose-puzzle">Выберите паззл</h3>
+					<div class="remodal-content scroll-pane">
+						<div class="remodal-content__content"><img class="remodal-content__img"
+							 src="./assets/img-prev/01.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/02.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/03.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/04.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/05.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/06.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/07.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/08.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/09.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/10.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/11.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/12.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/13.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/14.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/15.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/16.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/17.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/18.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/19.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/20.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/21.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/22.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/23.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/24.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/25.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/26.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/27.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/28.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/29.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/30.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/31.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/32.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/33.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/34.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/35.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/36.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/37.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/38.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/39.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/40.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/41.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/42.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/43.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/44.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/45.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/46.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/47.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/48.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/49.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/50.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/51.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/52.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/53.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/54.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/55.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/56.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/57.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/58.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/59.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/60.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/61.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/62.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/63.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/64.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/65.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/66.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/67.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/68.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/69.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/70.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/71.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/72.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/73.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/74.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/75.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/76.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/77.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/78.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/79.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/80.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/81.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/82.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/83.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/84.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/85.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/86.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/87.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/88.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/89.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/90.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/91.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/92.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/93.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/94.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/95.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/96.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/97.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/98.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/99.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/100.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/101.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/102.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/103.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/104.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/105.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/106.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/107.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/108.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/109.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/110.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/111.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/112.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/113.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/114.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/115.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/116.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/117.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/118.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/119.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/120.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/121.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/122.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/123.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/124.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/125.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/126.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/127.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/128.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/129.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/130.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/131.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/132.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/133.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/134.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/135.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/136.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/137.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/138.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/139.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/140.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/141.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/142.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/143.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/144.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/145.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/146.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/147.jpg"
+							 alt="" role="presentation" /><img class="remodal-content__img"
+							 src="./assets/img-prev/148.jpg" alt="" role="presentation" /><img
+							 class="remodal-content__img" src="./assets/img-prev/149.jpg" alt=""
+							 role="presentation" /><img class="remodal-content__img" src="./assets/img-prev/150.jpg"
+							 alt="" role="presentation" /></div>
+					</div>
+				</div>
+				<div class="remodal remodal__modal-about" data-remodal-id="modal-about"
+				 data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true,hashTracking: false">
+					<div class="remodal-closed" data-remodal-action="close">
+						<div class="remodal-closed__top"></div>
+						<div class="remodal-closed__center"></div>
+					</div>
+					<h3 class="remodal-h3 remodal-h3_about-game">Об игре</h3>
+					<div class="remodal-about scroll-pane-about">
+						<p class="remodal-about__p remodal-about__p_desc remodal-about__p_margin-top">Lovely Puzzle
+							позволит вам выбирать множество паззлов из библиоткеи игры, <br /> а также даст возможность
+							загрузить любую картинку в формате JPG с вашего <br /> компьютера, превратив ее в паззл,
+							который также можно собрать. <br /> При выходе из игры паззл сохраняется, поэтому вы всегда
+							сможете <br /> продолжить собирать его позже.</p><a class="remodal-about__logo"
+						 href="http://humaninterface.pro" target="blank"></a>
+						<p class="remodal-about__p remodal-about__p_devel remodal-about__p_font-size"><span
+							 class="remodal-about__p-span">В разработке участвовали: <br /></span>Ульященков Сергей
+							<span class="remodal-about__p-span">(автор идеи, <br /> дизайн, интерфейс), </span>Имя
+							<br /> Фамилия<span class="remodal-about__p-span">(программирование), <br /></span>Светлана
+							Фокина <span class="remodal-about__p-span">(соавтор).</span></p>
+						<h4 class="remodal-about__h4">Обратная связь</h4><a class="remodal-about__a"
+						 href="mailto:support@humaninterface.pro">support@humaninterface.pro</a>
+					</div>
+				</div>
+				<div class="remodal remodal__modal-games" data-remodal-id="modal-games"
+				 data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true,hashTracking: false">
+					<div class="remodal-closed" data-remodal-action="close">
+						<div class="remodal-closed__top"></div>
+						<div class="remodal-closed__center"></div>
+					</div>
+					<h3 class="remodal-h3 remodal-h3_other-games">Другие игры</h3>
+					<div class="remodal-games scroll-pane-games">
+						<p class="remodal-games__p">Попробуйте другие наши игры <br /> в Windows Store, Google Play и
+							App Store</p>
+						<div class="remodal-games__img-wrapp"><a class="remodal-games__img-box"
+							 href="http://ghostridegame.com" target="_blank">
+								<div class="remodal-games__img remodal-games__img_ghost-ride"></div>
+								<h4 class="remodal-games__h4">Ghost Ride</h4>
+							</a>
+							<div class="remodal-games__img-box remodal-games__img-box_music-quest">
+								<div class="remodal-games__img remodal-games__img_music-quest"></div>
+								<h4 class="remodal-games__h4 remodal-games__h4_music-quest">Music Quest <br /><span
+									 class="remodal-games__h4-span">(Coming Soon)</span></h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="remodal remodal__modal-options" data-remodal-id="modal-options"
+				 data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true,hashTracking: false">
+					<div class="remodal-closed" data-remodal-action="close">
+						<div class="remodal-closed__top"></div>
+						<div class="remodal-closed__center"></div>
+					</div>
+					<h3 class="remodal-h3 remodal-h3_options">Настройки</h3>
+					<div class="remodal-options">
+						<div class="remodal-options__level-wrapp">
+							<p class="remodal-options__p">Сложность паззла:</p>
+							<div class="remodal-options__wrap-input"><label
+								 class="remodal-options__label-level remodal-options__label-level_margin-left"><span
+									 class="remodal-options__span-easy">Легкий</span><input
+									 class="remodal-options__input-level" type="radio" name="level"
+									 value="1" /></label><label class="remodal-options__label-level"><span
+									 class="remodal-options__span-middle">Средний</span><input
+									 class="remodal-options__input-level" type="radio" name="level"
+									 value="2" /></label><label
+								 class="remodal-options__label-level remodal-options__label-level_margin"><span
+									 class="remodal-options__span-difficult">Сложный</span><input
+									 class="remodal-options__input-level" type="radio" name="level" value="3" /></label>
+							</div>
+						</div>
+						<div class="sound-wrapp">
+							<div class="sound-input"><input class="sound-input__input" type="checkbox" name="sound"
+								 id="sound-input" /><label class="sound-input__label" for="sound-input"><span
+									 class="sound-input__label-text">Звуки в игре <br /></span><span
+									 class="sound-input__label-span sound-input__label-span_on">Включены</span><span
+									 class="sound-input__label-span sound-input__label-span_off">Выключены</span></label>
+							</div>
+							<div class="sound-wrapp__button sound-wrapp__button_change-language"
+							 data-remodal-target="modal-lenguage">Сменить язык</div>
+						</div>
+					</div>
+				</div>
+				<div class="remodal remodal__modal-lenguage" data-remodal-id="modal-lenguage"
+				 data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true,hashTracking: false">
+					<div class="remodal-closed" data-remodal-action="close">
+						<div class="remodal-closed__top"></div>
+						<div class="remodal-closed__center"></div>
+					</div>
+					<h3 class="remodal-h3 remodal-h3_change-language">Сменить язык</h3>
+					<div class="remodal-lenguage">
+						<div class="remodal-lenguage__level-wrapp">
+							<p class="remodal-lenguage__p">Выберите язык:</p>
+							<div class="remodal-lenguage__wrap-input"><label
+								 class="remodal-lenguage__label-level remodal-lenguage__label-level_margin-left">English<input
+									 class="remodal-lenguage__input-level" type="radio" name="level"
+									 value="1" /></label><label class="remodal-lenguage__label-level"><span
+									 class="remodal-lenguage__span-rus">Русский</span><input
+									 class="remodal-lenguage__input-level" type="radio" name="level"
+									 value="2" /></label></div>
+						</div>
+						<div class="save-wrapp">
+							<div class="save-wrapp__button save-wrapp__button_save" data-remodal-action="confirm">
+								Сохранить</div>
+							<div class="save-wrapp__button save-wrapp__button_no" data-remodal-action="cancel">Отмена
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="remodal remodal__load-game" data-remodal-id="load-game"
+				 data-remodal-options="closeOnOutsideClick: false, closeOnEscape: false,hashTracking: false">
+					<div class="game-preloader">
+						<div class="game-preloader__loading"></div>
+						<div class="load-content">
+							<div class="load-content__loading-img">
+								<div class="load-content__img-preload"></div>
+							</div>
+							<p class="load-content__loading-load">Идет загрузка</p>
+							<p class="load-content__loading-p">Пожалуйста подождите</p>
+						</div>
+					</div>
+				</div>
+				<div class="remodal remodal__exit-game" data-remodal-id="exit-game"
+				 data-remodal-options="closeOnOutsideClick: true, closeOnEscape: true,hashTracking: false">
+					<h3 class="remodal-h3 remodal-h3_exit-game">Вернуться в главное меню?</h3>
+					<div class="remodal-exit">
+						<div class="exit-wrapp">
+							<div class="exit-wrapp__button exit-wrapp__button_return" data-remodal-action="confirm">В
+								главное меню</div>
+							<div class="exit-wrapp__button exit-wrapp__button_no" data-remodal-action="cancel">Отмена
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="remodal remodal__download-game" data-remodal-id="download-game"
+				 data-remodal-options="closeOnOutsideClick: false, closeOnEscape: false,hashTracking: false">
+					<h3 class="remodal-h3 remodal-h3_download-game">Данный вид файла не поддерживается.<br />
+						Выберите другой файл (jpeg либо png)</h3>
+					<div class="download-game">
+						<div class="download-game__button" data-remodal-action="cancel">Оk</div>
+					</div>
+				</div>
+				<div class="remodal remodal__game-complite" data-remodal-id="game-complite"
+				 data-remodal-options="closeOnOutsideClick: false, closeOnEscape: false,hashTracking: false">
+					<h3 class="remodal-h3 remodal-h3_game-complite">Поздравляем!</h3>
+					<div class="game-complite">
+						<p class="game-complite__p">Вы закончили паззл</p><img class="game-complite__img" alt=" "
+						 title=" "
+						 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><button
+						 class="game-complite__button" data-remodal-action="confirm">Продолжить</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./assets/scripts/app.min.js"></script>
+	</body>
+
+</html>
